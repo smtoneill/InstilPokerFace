@@ -17,12 +17,20 @@ class Program
             return;
         }
 
-        IDataSource dataSource = BuildDataSource(args[0]);
-        IHandEvaluator handEvaluator = new HandEvaluator();
-        IHandConsumer consumer = BuildConsumer();
+        try
+        {
 
-        PokerHandService service = new(dataSource, handEvaluator, consumer);
-        service.Process();
+            IDataSource dataSource = BuildDataSource(args[0]);
+            IHandEvaluator handEvaluator = new HandEvaluator();
+            IHandConsumer consumer = BuildConsumer();
+
+            PokerHandService service = new(dataSource, handEvaluator, consumer);
+            service.Process();
+        }
+        catch (Exception ex) 
+        {
+            Console.WriteLine("ERROR: " + ex.Message);
+        }
     }
 
 
