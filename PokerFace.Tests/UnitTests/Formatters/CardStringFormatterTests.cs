@@ -13,7 +13,7 @@ public class CardStringFormatterTests
         string expected = "AS";
 
         string actual = CardStringFormatter.Format(card);
-        
+
         Assert.Equal(expected, actual);
     }
 }

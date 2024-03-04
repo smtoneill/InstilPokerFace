@@ -48,12 +48,12 @@ public class Hand
 
         // Special case for low-ace straight. When first card is Two, only evaluate that the remaining cards are a straight.
         bool hasLowAce = (firstCard == CardRank.Two) && (ordered.Last() == CardRank.Ace);
-        
+
         int count = ordered.Count - (hasLowAce ? 1 : 0);
 
         bool isStraight = true;
 
-        for(int i = 1; i < count; i++)
+        for (int i = 1; i < count; i++)
         {
             if (ordered[i] != ordered[i - 1] + 1)
             {
@@ -71,7 +71,7 @@ public class Hand
             .GroupBy(hand => hand.Rank)
             .Select(group => new RankCount(group.Key, group.Count()));
     }
-    
+
     private IEnumerable<CardRank> EvaluateOrderedRank()
     {
         return Cards.Select(card => card.Rank).OrderBy(rank => rank);

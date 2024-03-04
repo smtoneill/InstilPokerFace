@@ -1,13 +1,12 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Matchers
+namespace PokerFace.Matchers;
+
+public class HighCardHandMatcher : IHandMatcher
 {
-    public class HighCardHandMatcher : IHandMatcher
-    {
-        public HighCardHandMatcher() { }
+    public HighCardHandMatcher() { }
 
-        public HandRank Rank => HandRank.HighCard;
+    public HandRank Rank => HandRank.HighCard;
 
-        public bool IsMatch(Hand hand) => true;
-    }
+    public bool IsMatch(Hand hand) => true;
 }

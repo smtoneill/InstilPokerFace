@@ -1,18 +1,17 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Matchers
+namespace PokerFace.Matchers;
+
+public class StraightHandMatcher : IHandMatcher
 {
-    public class StraightHandMatcher : IHandMatcher
+    public StraightHandMatcher() { }
+
+    public HandRank Rank { get; } = HandRank.Straight;
+
+    public bool IsMatch(Hand hand)
     {
-        public StraightHandMatcher() { }
+        ArgumentNullException.ThrowIfNull(hand, nameof(hand));
 
-        public HandRank Rank { get; } = HandRank.Straight;
-
-        public bool IsMatch(Hand hand)
-        {
-            ArgumentNullException.ThrowIfNull(hand, nameof(hand));
-
-            return hand.IsStraight;
-        }
+        return hand.IsStraight;
     }
 }

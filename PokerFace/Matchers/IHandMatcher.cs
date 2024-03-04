@@ -1,11 +1,10 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Matchers
-{
-    public interface IHandMatcher
-    {
-        HandRank Rank { get; }
+namespace PokerFace.Matchers;
 
-        bool IsMatch(Hand hand);
-    }
+public interface IHandMatcher
+{
+    HandRank Rank { get; }
+
+    bool IsMatch(Hand hand);
 }

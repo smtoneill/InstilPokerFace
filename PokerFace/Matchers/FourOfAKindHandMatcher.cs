@@ -1,9 +1,8 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Matchers
+namespace PokerFace.Matchers;
+
+public class FourOfAKindHandMatcher : NOfRankHandMatcherBase
 {
-    public class FourOfAKindHandMatcher : NOfRankHandMatcherBase
-    {
-        public FourOfAKindHandMatcher() : base(HandRank.FourOfAKind, 4) { }
-    }
+    public FourOfAKindHandMatcher() : base(HandRank.FourOfAKind, 4) { }
 }

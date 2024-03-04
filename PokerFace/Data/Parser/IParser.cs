@@ -1,9 +1,8 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Data.Parser
+namespace PokerFace.Data.Parser;
+
+public interface IParser
 {
-    public interface IParser
-    {
-        Hand Parse(string record);
-    }
+    Hand Parse(string record);
 }

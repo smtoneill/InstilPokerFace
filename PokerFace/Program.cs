@@ -11,7 +11,7 @@ class Program
 {
     private static void Main(string[] args)
     {
-        if(args.Length == 0) 
+        if (args.Length == 0)
         {
             Console.WriteLine("The filepath parameter was not specified.");
             return;
@@ -27,7 +27,7 @@ class Program
             PokerHandService service = new(dataSource, handEvaluator, consumer);
             service.Process();
         }
-        catch (Exception ex) 
+        catch (Exception ex)
         {
             Console.WriteLine("ERROR: " + ex.Message);
         }

@@ -2,7 +2,6 @@
 using PokerFace.Data.DataSource.File;
 using PokerFace.Data.Parser;
 using PokerFace.Models;
-using System;
 
 namespace PokerFace.Tests.UnitTests.Data.DataSource.File;
 

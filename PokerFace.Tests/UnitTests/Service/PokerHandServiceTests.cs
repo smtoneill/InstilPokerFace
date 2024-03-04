@@ -1,8 +1,6 @@
 ﻿using Moq;
 using PokerFace.Consumers;
 using PokerFace.Data.DataSource;
-using PokerFace.Data.DataSource.File;
-using PokerFace.Data.Parser;
 using PokerFace.Evaluators;
 using PokerFace.Models;
 using PokerFace.Service;
@@ -79,12 +77,12 @@ public class PokerHandServiceTests
         Hand hand2 = new(cards2);
 
         List<Hand> expectedHands = [hand1, hand2];
-        
+
         Mock<IDataSource> dataSourceMock = new();
         dataSourceMock.Setup(mock => mock.GetHands()).Returns(expectedHands);
 
         Mock<IHandEvaluator> evaluatorMock = new();
-        
+
         Mock<IHandConsumer> consumerMock = new();
 
         PokerHandService sut = new(dataSourceMock.Object, evaluatorMock.Object, consumerMock.Object);

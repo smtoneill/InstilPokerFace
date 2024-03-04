@@ -24,7 +24,7 @@ public class PokerHandService
 
     public void Process()
     {
-        foreach(Hand hand in _dataSource.GetHands())
+        foreach (Hand hand in _dataSource.GetHands())
         {
             _evaluator.Evaluate(hand);
             _consumer.Consume(hand);

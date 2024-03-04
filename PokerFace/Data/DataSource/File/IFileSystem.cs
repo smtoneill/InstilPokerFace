@@ -1,9 +1,8 @@
-﻿namespace PokerFace.Data.DataSource.File
-{
-    public interface IFileSystem
-    {
-        bool FileExists(string path);
+﻿namespace PokerFace.Data.DataSource.File;
 
-        IEnumerable<string> ReadLines(string path);
-    }
+public interface IFileSystem
+{
+    bool FileExists(string path);
+
+    IEnumerable<string> ReadLines(string path);
 }

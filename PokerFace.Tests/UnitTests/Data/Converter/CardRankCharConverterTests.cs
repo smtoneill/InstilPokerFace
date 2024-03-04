@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using PokerFace.Data.Converter;
+﻿using PokerFace.Data.Converter;
 using PokerFace.Models;
 
 namespace PokerFace.Tests.UnitTests.Data.Converter;

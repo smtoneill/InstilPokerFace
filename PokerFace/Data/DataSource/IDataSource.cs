@@ -1,9 +1,8 @@
 ﻿using PokerFace.Models;
 
-namespace PokerFace.Data.DataSource
+namespace PokerFace.Data.DataSource;
+
+public interface IDataSource
 {
-    public interface IDataSource
-    {
-        IEnumerable<Hand> GetHands();
-    }
+    IEnumerable<Hand> GetHands();
 }
